@@ -44,6 +44,7 @@ outline: none;
 </form>
 </div>
 详细及后续使用方法见<a href="https://dobug.link/article/soso">这里</a>
+<script src="./main.config.js"></script>
 <script>
 function getQueryString(name) {
   const url_string = window.location.href; // window.location.href
@@ -52,10 +53,9 @@ function getQueryString(name) {
 }
 if (getQueryString("txt") != null) {
   var ssc = getQueryString("txt");
-  window.open("https://www.baidu.com/s?wd=" + ssc, "_blank");
-  window.open("https://cn.bing.com/search?q=" + ssc, "_blank");
-  window.open("https://www.sogou.com/web?query=" + ssc, "_blank");
-  window.open("https://www.so.com/s?q=" + ssc, "_blank");
+  for (var i = 0;i < searchstr.length;++i){
+    window.open(searchstr[i] + ssc, "_blank");
+  }
 }
 </script>
 </body>
